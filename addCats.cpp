@@ -8,10 +8,7 @@
 /// @author Nathaniel Murray <murrayn@hawaii.edu>
 /// @date 3_20_2022
 //////////////////////////////////////////////////////////////////////////
-#include <stdio.h>
-#include <string.h>
-#include <stdbool.h>
-#include "addCats.h"
+#include <cstring>
 #include "catDatabase.h"
 #define MAX_CATS 1024
 #include "config.h"
@@ -25,7 +22,7 @@ bool containsElement(char name[]){
     return false;
 }
 
-int addCat(char name[],enum : char catgender gender,enum : char catbreed breed,bool isCatFixed,float weight,enum : char Color collarColor1,enum : char Color collarColor2, unsigned long long license){
+int addCat(char name[],enum catgender gender,enum catbreed breed,bool isCatFixed,float weight,enum Color collarColor1,enum Color collarColor2, unsigned long long license){
     if(numberOfCats>=MAX_CATS){
         return -1;
     }

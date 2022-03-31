@@ -8,7 +8,6 @@
 /// @author Nathaniel Murray <murrayn@hawaii.edu>
 /// @date 3_20_2022
 //////////////////////////////////////////////////////////////////////////
-#include <stdio.h>
 #include "catDatabase.h"
 
 int deleteAllCats(){

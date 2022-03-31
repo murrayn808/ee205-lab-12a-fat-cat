@@ -9,7 +9,7 @@
 /// @date 3_20_2022
 //////////////////////////////////////////////////////////////////////////
 
-#include <stdio.h>
+#include <cstdio>
 #include "catDatabase.h"
 #pragma once
 

@@ -8,14 +8,13 @@
 /// @author Nathaniel Murray <murrayn@hawaii.edu>
 /// @date 3_20_2022
 //////////////////////////////////////////////////////////////////////////
-
-#include <stdio.h>
+#include <cstdio>
 #include "catDatabase.h"
 #pragma once
 
 int updateCatName(int index, char newName[]);
 int fixCat(int index);
 int updateCatWeight(int index, float newWeight);
-int updateCatCollar1(int index, enum : char Color collarColor1);
-int updateCatCollar2(int index, enum : char Color collarColor2);
+int updateCatCollar1(int index, enum Color collarColor1);
+int updateCatCollar2(int index, enum Color collarColor2);
 int updateLicense(int index, unsigned long long license);

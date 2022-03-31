@@ -8,8 +8,7 @@
 /// @author Nathaniel Murray <murrayn@hawaii.edu>
 /// @date 3_20_2022
 //////////////////////////////////////////////////////////////////////////
-
-#include <stdio.h>
+#include <cstdio>
 #include "catDatabase.h"
 #include "addCats.h"
 #include "config.h"

@@ -8,8 +8,9 @@
 /// @author Nathaniel Murray <murrayn@hawaii.edu>
 /// @date 3_20_2022
 //////////////////////////////////////////////////////////////////////////
+#include <cstdio>
+#include "catDatabase.h"
 #pragma once
 extern bool containsElement(char name[]);
 
-extern int addCat(char name[],enum : char catgender gender,enum : char catbreed breed,bool isCatFixed,float weight,enum : char Color collarColor1,enum : char Color collarColor2, unsigned long long license);
-
+extern int addCat(char name[],enum catgender gender,enum catbreed breed,bool isCatFixed,float weight,enum Color collarColor1,enum Color collarColor2, unsigned long long license);

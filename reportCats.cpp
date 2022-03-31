@@ -10,7 +10,7 @@
 //////////////////////////////////////////////////////////////////////////
 
 
-#include <stdio.h>
+#include <cstdio>
 #include "catDatabase.h"
 #include "config.h"
 

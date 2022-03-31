@@ -2,13 +2,14 @@
 <project version="4">
   <component name="PublishConfigData" remoteFilesAllowedToDisappearOnAutoupload="false">
     <serverData>
-      <paths name="Remote Host (0bf7a223-4d69-4a56-956f-11d7caf2b243)">
+      <paths name="Wiliki (c8df506d-81a9-4499-981a-f1785335f7b9)">
         <serverdata>
           <mappings>
-            <mapping deploy="/tmp/tmp.VmuUsgqWMv" local="$PROJECT_DIR$" />
+            <mapping deploy="/tmp/tmp.mLuHq0yr7M" local="$PROJECT_DIR$" />
           </mappings>
           <excludedPaths>
-            <excludedPath local="true" path="$PROJECT_DIR$/cmake-build-debug" />
+            <excludedPath local="true" path="$PROJECT_DIR$/cmake-build-default" />
+            <excludedPath local="true" path="$PROJECT_DIR$/cmake-build-debug-wiliki" />
           </excludedPaths>
         </serverdata>
       </paths>

@@ -9,7 +9,7 @@
 /// @date 3_20_2022
 //////////////////////////////////////////////////////////////////////////
 
-#include <stdio.h>
+#include <cstdio>
 #define REPORT_CATS 1024
 #include "catDatabase.h"
 #pragma once
