@@ -36,6 +36,6 @@ struct Cat {
 extern struct Cat catArray[MAX_CATS];
 
 extern int initializeDatabase();
-extern int numberOfCats;
+extern NumCats numberOfCats;
 
 

@@ -13,10 +13,11 @@
 #include "newTypeDef.h"
 #pragma once
 
+typedef int NumCats;
 typedef float Weight;
-int updateCatName(int index, char newName[]);
+int updateCatName(NumCats index, char newName[]);
 int fixCat(int index);
-int updateCatWeight(int index, Weight newWeight);
-int updateCatCollar1(int index, enum Color collarColor1);
-int updateCatCollar2(int index, enum Color collarColor2);
-int updateLicense(int index, unsigned long long license);
+int updateCatWeight(NumCats index, Weight newWeight);
+int updateCatCollar1(NumCats index, enum Color collarColor1);
+int updateCatCollar2(NumCats index, enum Color collarColor2);
+int updateLicense(NumCats index, unsigned long long license);
