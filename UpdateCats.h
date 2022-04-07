@@ -10,11 +10,13 @@
 //////////////////////////////////////////////////////////////////////////
 #include <cstdio>
 #include "catDatabase.h"
+#include "newTypeDef.h"
 #pragma once
 
+typedef float Weight;
 int updateCatName(int index, char newName[]);
 int fixCat(int index);
-int updateCatWeight(int index, float newWeight);
+int updateCatWeight(int index, Weight newWeight);
 int updateCatCollar1(int index, enum Color collarColor1);
 int updateCatCollar2(int index, enum Color collarColor2);
 int updateLicense(int index, unsigned long long license);

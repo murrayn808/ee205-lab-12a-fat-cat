@@ -9,8 +9,8 @@
 /// @date   30_Mar_2022
 ///////////////////////////////////////////////////////////////////////////////
 #include <cstdio>
-
 #include <cstring>
+#include "newTypeDef.h"
 #pragma once
 #define MAX_CATS 1024
 #define MAX_NAME_LENGTH 50
@@ -27,7 +27,7 @@ struct Cat {
     enum Color collarColor2;
     unsigned long long license;
     bool isFixed;
-    float weight;
+    Weight weight;
     char name[MAX_NAME_LENGTH];
 };
 

@@ -10,6 +10,7 @@
 //////////////////////////////////////////////////////////////////////////
 #include <cstring>
 #include "catDatabase.h"
+#include "newTypeDef.h"
 #define MAX_CATS 1024
 #include "config.h"
 //if true contains element that is the same
@@ -22,7 +23,7 @@ bool containsElement(char name[]){
     return false;
 }
 
-int addCat(char name[],enum catgender gender,enum catbreed breed,bool isCatFixed,float weight,enum Color collarColor1,enum Color collarColor2, unsigned long long license){
+int addCat(char name[],enum catgender gender,enum catbreed breed,bool isCatFixed,Weight weight,enum Color collarColor1,enum Color collarColor2, unsigned long long license){
     if(numberOfCats>=MAX_CATS){
         return -1;
     }

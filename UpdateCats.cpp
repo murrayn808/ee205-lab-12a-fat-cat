@@ -12,6 +12,7 @@
 #include "catDatabase.h"
 #include "addCats.h"
 #include "config.h"
+#include "newTypeDef.h"
 
 int updateCatName(int index, char newName[]){
     if(index<0||index>=numberOfCats){
@@ -33,7 +34,7 @@ int fixCat(int index){
     return 0;
 }
 
-int updateCatWeight(int index, float newWeight){
+int updateCatWeight(int index, Weight newWeight){
     if(index<0||index>=numberOfCats){
         return -1;
     }
