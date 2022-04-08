@@ -30,7 +30,7 @@ int fixCat(int index){
     if(index<0||index>=numberOfCats){
         return -1;
     }
-    catArray[index].isFixed=true;
+    catArray[index].isCatFixed=true;
     return 0;
 }
 

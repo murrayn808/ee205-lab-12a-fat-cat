@@ -9,9 +9,13 @@
 /// @date 3_20_2022
 //////////////////////////////////////////////////////////////////////////
 #include <stdio.h>
+#include <cassert>
+#include <cstring>
+#include <exception>
+#include <iostream>
+#include "Cat.h"
 #include "catDatabase.h"
 #include "addCats.h"
-#include "UpdateCats.h"
 #include "reportCats.h"
 #include "deleteCats.h"
 #include "config.h"

@@ -19,7 +19,7 @@ int printCat(int index){
         fprintf(stderr, "animalFarm0: Bad cat [%d]", index);
     }
 
-    printf("cat index=[%d] name=[%s] gender=[%d] breed=[%d] isFixed=[%d] weight=[%f] collarColor1=[%s] collarColor2=[%s] license=[%llu]\n", index, catArray[index].name, catArray[index].gender, catArray[index].breed, catArray[index].isFixed, catArray[index].weight, colorName(catArray[index].collarColor1), colorName(catArray[index].collarColor2), catArray[index].license);
+    printf("cat index=[%d] name=[%s] gender=[%d] breed=[%d] isCatFixed=[%d] weight=[%f] collarColor1=[%s] collarColor2=[%s] license=[%llu]\n", index, catArray[index].name, catArray[index].gender, catArray[index].breed, catArray[index].isCatFixed, catArray[index].weight, colorName(catArray[index].collarColor1), colorName(catArray[index].collarColor2), catArray[index].license);
     return 0;
 }
 

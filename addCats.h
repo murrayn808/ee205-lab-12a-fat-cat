@@ -11,7 +11,8 @@
 #include <cstdio>
 #include "newTypeDef.h"
 #include "catDatabase.h"
+#include "Cat.h"
 #pragma once
 extern bool containsElement(char name[]);
 
-extern int addCat(char name[],enum catgender gender,enum catbreed breed,bool isCatFixed,Weight weight,enum Color collarColor1,enum Color collarColor2, unsigned long long license);
+extern int addCat(char name[], enum Gender gender, enum Breed breed, bool isCatFixed, Weight weight, enum Color collarColor1, enum Color collarColor2, unsigned long long license);

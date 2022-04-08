@@ -8,5 +8,12 @@
 /// @author <murrayn@hawaii.edu>
 /// @date   30_Mar_2022
 ///////////////////////////////////////////////////////////////////////////////
-#define PROGRAM_NAME "animalfarm1"
+#define PROGRAM_NAME "animalfarm2"
+#define PROGRAM_TITLE "Animal Farm 2"
+typedef float Weight;
+enum Gender{UNKNOWN_GENDER=0,MALE,FEMALE};
+enum Breed{UNKNOWN_BREED=0,MAINE_COON,MANX,SHORTHAIR,PERSIAN,SPHYNX};
+const Weight UNKNOWN_WEIGHT = -1;
+
+
 

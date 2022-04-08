@@ -11,27 +11,10 @@
 #include <cstdio>
 #include <cstring>
 #include "newTypeDef.h"
+#include "config.h"
 #pragma once
 #define MAX_CATS 1024
 #define MAX_NAME_LENGTH 50
-
-enum catgender{UNKNOWN_GENDER,MALE,FEMALE};
-enum catbreed{UNKNOWN_BREED,MAINE_COON,MANX,SHORTHAIR,PERSIAN,SPHYNX};
-enum Color{BLACK,WHITE,RED,BLUE,GREEN,PINK};
-char* colorName (enum Color color);
-struct Cat {
-
-    enum catgender gender;
-    enum catbreed breed;
-    enum Color collarColor1;
-    enum Color collarColor2;
-    unsigned long long license;
-    bool isFixed;
-    Weight weight;
-    char name[MAX_NAME_LENGTH];
-};
-
-
 
 extern struct Cat catArray[MAX_CATS];
 

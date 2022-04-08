@@ -11,8 +11,10 @@
 #include <cstring>
 #include "catDatabase.h"
 #include "newTypeDef.h"
-#define MAX_CATS 1024
+#include "addCats.h"
+#include "Cat.h"
 #include "config.h"
+#define MAX_CATS 1024
 //if true contains element that is the same
 bool containsElement(char name[]){
     for(int i=0;i<numberOfCats;i++){
@@ -23,7 +25,7 @@ bool containsElement(char name[]){
     return false;
 }
 
-int addCat(char name[],enum catgender gender,enum catbreed breed,bool isCatFixed,Weight weight,enum Color collarColor1,enum Color collarColor2, unsigned long long license){
+int addCat(char name[], enum Gender gender, enum Breed breed, bool isCatFixed, Weight weight){
     if(numberOfCats>=MAX_CATS){
         return -1;
     }
@@ -42,12 +44,9 @@ int addCat(char name[],enum catgender gender,enum catbreed breed,bool isCatFixed
 
     catArray[numberOfCats].gender = gender;
     catArray[numberOfCats].breed = breed;
-    catArray[numberOfCats].isFixed = isCatFixed;
+    catArray[numberOfCats].isCatFixed = isCatFixed;
     catArray[numberOfCats].weight = weight;
     strcpy(catArray[numberOfCats].name,name);
-    catArray[numberOfCats].collarColor1 = collarColor1;
-    catArray[numberOfCats].collarColor2 = collarColor2;
-    catArray[numberOfCats].license = license;
     int locationOfCat = numberOfCats;
     numberOfCats++;
     return locationOfCat;

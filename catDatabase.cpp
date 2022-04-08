@@ -10,24 +10,17 @@
 ///////////////////////////////////////////////////////////////////////////////
 
 #include <cstring>
+#include <stdexcept>
+#include <iostream>
+#include <cassert>
+#include "config.h"
 #include "catDatabase.h"
+#include "Cat.h"
+#include "reportCats.h"
 #define MAX_CATS 1024
 #define MAX_NAME_LENGTH 50
 
 struct Cat catArray[MAX_CATS];
-
-char* colorName (enum Color color){
-    switch (color) {
-        case BLACK: return "Black";
-        case WHITE: return "White";
-        case RED:   return "Red";
-        case BLUE:  return "Blue";
-        case GREEN: return "Green";
-        case PINK:  return "Pink";
-    }
-
-    return nullptr;
-}
 
 int numberOfCats = 0;
 int initializeDatabase(){
