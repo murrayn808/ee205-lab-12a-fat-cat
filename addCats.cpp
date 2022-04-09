@@ -16,13 +16,11 @@
 #include "config.h"
 #define MAX_CATS 1024
 //if true contains element that is the same
-bool containsElement(char name[]){
-    for(int i=0;i<numberOfCats;i++){
-        if(strcmp(name,catArray[i].name)==0){
-            return true;
-        }
+
+bool addCat(Cat* newCat){
+    if(newCat != nullptr){
+        isCatInDatabase(newCat);
     }
-    return false;
 }
 
 int addCat(char name[], enum Gender gender, enum Breed breed, bool isCatFixed, Weight weight){
@@ -35,7 +33,7 @@ int addCat(char name[], enum Gender gender, enum Breed breed, bool isCatFixed, W
     if(strlen(name)>50){
         return -3;
     }
-    if(containsElement(name)){
+    if(isCatInDatabase(name)){
         return -4;
     }
     if(weight<=0){

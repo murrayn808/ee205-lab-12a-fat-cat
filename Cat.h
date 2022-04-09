@@ -25,6 +25,11 @@ protected:
     enum Breed breed;
     bool isCatFixed;
     Weight weight;
+
+public:
+
+    Cat* next;
+
 public:
     Cat();
 
@@ -64,7 +69,6 @@ public:
 
     static bool validateWeight(const Weight newWeight);
 
-    Cat* next;
 
 private:
 

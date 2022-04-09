@@ -18,7 +18,7 @@ int updateCatName(int index, char newName[]){
     if(index<0||index>=numberOfCats){
         return -1;
     }
-    if(containsElement(newName)){
+    if(isCatInDatabase(newName)){
         fprintf(stderr, "\e[0;31m" "[ERROR]" "\e[0m"  "Can't update cat name. There is already a cat named %s.\n", newName);
         return -2;
     }

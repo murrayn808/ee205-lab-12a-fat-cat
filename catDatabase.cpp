@@ -22,6 +22,17 @@
 
 struct Cat catArray[MAX_CATS];
 
+Cat* catDatabaseHeadPointer = nullptr;
+
+extern bool isCatInDatabase(Cat* newCat){
+    for(int i=0;i<numberOfCats;i++){
+        if(strcmp(name,catArray[i].name)==0){
+            return true;
+        }
+    }
+    return false;
+}
+
 int numberOfCats = 0;
 int initializeDatabase(){
     numberOfCats = 0;

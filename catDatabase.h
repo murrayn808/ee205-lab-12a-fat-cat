@@ -12,13 +12,16 @@
 #include <cstring>
 #include "newTypeDef.h"
 #include "config.h"
+#include "Cat.h"
 #pragma once
 #define MAX_CATS 1024
 #define MAX_NAME_LENGTH 50
 
-extern struct Cat catArray[MAX_CATS];
+extern Cat* catDatabaseHeadPointer;
 
+extern struct Cat catArray[MAX_CATS];
 extern int initializeDatabase();
 extern NumCats numberOfCats;
+extern bool isCatInDatabase(Cat* newCat);
 
 

@@ -13,6 +13,6 @@
 #include "catDatabase.h"
 #include "Cat.h"
 #pragma once
-extern bool containsElement(char name[]);
+extern bool isCatInDatabase(char name[]);
 
 extern int addCat(char name[], enum Gender gender, enum Breed breed, bool isCatFixed, Weight weight);

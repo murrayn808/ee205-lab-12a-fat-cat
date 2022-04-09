@@ -22,30 +22,24 @@
 using std::array; using std::fill;
 
 Cat::Cat(){
-    char name[MAX_NAME_LENGTH] = "";
-    enum Gender gender = UNKNOWN_GENDER;
-    enum Breed breed = UNKNOWN_BREED;
-    bool isCatFixed = false;
-    Weight weight = UNKNOWN_WEIGHT;
+    memset(name, 0, sizeof (name));
+    gender = UNKNOWN_GENDER;
+    breed = UNKNOWN_BREED;
+    isCatFixed = false;
+    weight = UNKNOWN_WEIGHT;
 }
 
 Cat::Cat(const char* newName, const Gender newGender, const Breed newBreed, const Weight newWeight){
-    char name[MAX_NAME_LENGTH];
     strncpy(name, newName, sizeof(name) );
     name[MAX_NAME_LENGTH-1]='\0';
-    enum Gender gender = newGender;
-    enum Breed breed = newBreed;
-    bool isCatFixed = false;
-    Weight weight = newWeight;
+    gender = newGender;
+    breed = newBreed;
+    isCatFixed = false;
+    weight = newWeight;
 }
 
 Cat::~Cat() {
-    char name[MAX_NAME_LENGTH];
-    memset(name, 0, sizeof (name));
-    enum Gender gender = UNKNOWN_GENDER;
-    enum Breed breed = UNKNOWN_BREED;
-    bool isCatFixed = false;
-    Weight weight = UNKNOWN_WEIGHT;
+    zeroOutMemberData();
 }
 
 const char *Cat::getName() const noexcept {
@@ -96,14 +90,18 @@ void Cat::setGender(Gender newGender) {
     if(gender == UNKNOWN_GENDER){
         gender = newGender;
     }
-    throw std::logic_error("Logic error. Can't change gender");
+    else {
+        throw std::logic_error("Logic error. Can't change gender");
+    }
 }
 
 void Cat::setBreed(Breed newBreed) {
         if (breed == UNKNOWN_BREED) {
             breed = newBreed;
         }
-        throw std::logic_error("Logic error. Can't change breed");
+        else {
+            throw std::logic_error("Logic error. Can't change breed");
+        }
 }
 
 bool Cat::validateGender(const Gender newGender) {
@@ -117,25 +115,28 @@ bool Cat::validateWeight(const Weight newWeight) {
     if(newWeight!=UNKNOWN_WEIGHT){
         return true;
     }
-    return false;
+    else{
+        throw std::invalid_argument("newWeight <= 0.");
+    }
 }
 
 bool Cat::validateBreed(const Breed newBreed) {
     if(newBreed!=UNKNOWN_BREED){
         return true;
     }
-    return false;
+    else{
+        throw std::invalid_argument("newBreed is UNKNOWN_BREED.");
+    }
 }
 
 bool Cat::validateName(const char *newName) {
-    if((newName != nullptr || strlen(newName) !=0) && strlen(newName)>0){
+    if(newName != nullptr && strlen(newName)>0 && strlen(newName) < MAX_NAME_LENGTH){
         return true;
     }
-    if(newName == nullptr /* || strlen(newName) = 0 */){
+    if(newName == nullptr || strlen(newName) == 0){
         throw std::invalid_argument("Invalid Argument.");
     }
     if(strlen(newName) >= MAX_NAME_LENGTH){
-        return false;
         throw std::length_error("Length error.");
     }
 }
@@ -163,3 +164,12 @@ bool Cat::print() const noexcept {
     FORMAT_LINE( "Cat", "weight" ) << getWeight() << endl ;
     return true ;
 }
+
+void Cat::zeroOutMemberData() {
+     memset(name, 0, sizeof (name));
+     gender = UNKNOWN_GENDER;
+     breed = UNKNOWN_BREED;
+     isCatFixed = false;
+     weight = UNKNOWN_WEIGHT;
+}
+
