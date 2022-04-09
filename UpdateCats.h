@@ -18,6 +18,3 @@ typedef float Weight;
 int updateCatName(NumCats index, char newName[]);
 int fixCat(int index);
 int updateCatWeight(NumCats index, Weight newWeight);
-int updateCatCollar1(NumCats index, enum Color collarColor1);
-int updateCatCollar2(NumCats index, enum Color collarColor2);
-int updateLicense(NumCats index, unsigned long long license);

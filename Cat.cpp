@@ -13,6 +13,7 @@
 #include <iostream>
 #include <cassert>
 #include <array>
+#include <iomanip>
 #include "catDatabase.h"
 #include "Cat.h"
 #include "reportCats.h"
@@ -135,7 +136,7 @@ bool Cat::validateName(const char *newName) {
     }
     if(strlen(newName) >= MAX_NAME_LENGTH){
         return false;
-        //return std::length_error
+        throw std::length_error("Length error.");
     }
 }
 bool Cat::validate() const noexcept {
@@ -147,6 +148,9 @@ bool Cat::validate() const noexcept {
 
 bool Cat::print() const noexcept {
 
+    using namespace std;
+
+    #define FORMAT_LINE(className, member) cout << setw(8) << (className) << setw(20) << (member) << setw(52)
     assert( validate() ) ;
     cout << setw(80) << setfill( '=' ) << "" << endl ;
     cout << setfill( ' ' ) ;

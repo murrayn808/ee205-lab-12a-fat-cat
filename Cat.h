@@ -64,6 +64,8 @@ public:
 
     static bool validateWeight(const Weight newWeight);
 
+    Cat* next;
+
 private:
 
     void zeroOutMemberData();
