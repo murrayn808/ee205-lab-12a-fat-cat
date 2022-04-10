@@ -131,12 +131,14 @@ bool Cat::validateName(const char *newName) {
     if(strlen(newName) >= MAX_NAME_LENGTH){
         throw std::length_error("Length error.");
     }
+    return false;
 }
 bool Cat::validate() const noexcept {
     if(validateBreed(Cat::breed) && validateName(Cat::name) && validateWeight(Cat::weight) &&
        validateGender(Cat::gender)){
         return true;
     }
+    return false;
 }
 
 bool Cat::print() const noexcept {

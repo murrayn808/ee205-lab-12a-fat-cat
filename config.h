@@ -10,6 +10,7 @@
 ///////////////////////////////////////////////////////////////////////////////
 #define PROGRAM_NAME "animalfarm2"
 #define PROGRAM_TITLE "Animal Farm 2"
+#pragma once
 typedef float Weight;
 enum Gender{UNKNOWN_GENDER=0,MALE,FEMALE};
 enum Breed{UNKNOWN_BREED=0,MAINE_COON,MANX,SHORTHAIR,PERSIAN,SPHYNX};

@@ -27,6 +27,13 @@ int main(__attribute__((unused)) int argc, __attribute__((unused)) char *argv[])
     Cat trin("Trin", FEMALE, MANX, 1.4);
     Cat chili("Chili", MALE, SHORTHAIR, 1.5);
 
+    addCat(&loki);
+    addCat(&milo);
+    addCat(&bella);
+    addCat(&kali);
+    addCat(&trin);
+    addCat(&chili);
+
     printAllCats();
     deleteAllCats();
     printAllCats();

@@ -11,6 +11,7 @@
 
 #include <cstdio>
 #define REPORT_CATS 1024
+#include "Cat.h"
 #include "catDatabase.h"
 #pragma once
 

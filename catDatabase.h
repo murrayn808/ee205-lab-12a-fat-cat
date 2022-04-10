@@ -21,7 +21,7 @@ extern Cat* catDatabaseHeadPointer;
 
 extern void initializeDatabase();
 extern NumCats numberOfCats;
-extern bool isCatInDatabase(Cat* aCat);
+extern bool isCatInDatabase(const Cat* aCat);
 extern bool validateDatabase();
 
 
