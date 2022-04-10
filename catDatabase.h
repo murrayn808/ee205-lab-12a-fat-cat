@@ -19,9 +19,10 @@
 
 extern Cat* catDatabaseHeadPointer;
 
-extern struct Cat catArray[MAX_CATS];
-extern int initializeDatabase();
+extern void initializeDatabase();
 extern NumCats numberOfCats;
-extern bool isCatInDatabase(Cat* newCat);
+extern bool isCatInDatabase(Cat* aCat);
+extern bool validateDatabase();
+
 
 

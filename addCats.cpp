@@ -8,9 +8,8 @@
 /// @author Nathaniel Murray <murrayn@hawaii.edu>
 /// @date 3_20_2022
 //////////////////////////////////////////////////////////////////////////
-#include <cstring>
+#include <stdexcept>
 #include "catDatabase.h"
-#include "newTypeDef.h"
 #include "addCats.h"
 #include "Cat.h"
 #include "config.h"
@@ -18,35 +17,12 @@
 //if true contains element that is the same
 
 bool addCat(Cat* newCat){
-    if(newCat != nullptr){
-        isCatInDatabase(newCat);
+    if(newCat != nullptr && isCatInDatabase(newCat)==false){
+        newCat->next = catDatabaseHeadPointer;
+        catDatabaseHeadPointer = newCat;
+        numberOfCats = numberOfCats + 1;
+        return true;
     }
-}
-
-int addCat(char name[], enum Gender gender, enum Breed breed, bool isCatFixed, Weight weight){
-    if(numberOfCats>=MAX_CATS){
-        return -1;
-    }
-    if(strlen(name)==0){
-        return -2;
-    }
-    if(strlen(name)>50){
-        return -3;
-    }
-    if(isCatInDatabase(name)){
-        return -4;
-    }
-    if(weight<=0){
-        return -5;
-    }
-
-    catArray[numberOfCats].gender = gender;
-    catArray[numberOfCats].breed = breed;
-    catArray[numberOfCats].isCatFixed = isCatFixed;
-    catArray[numberOfCats].weight = weight;
-    strcpy(catArray[numberOfCats].name,name);
-    int locationOfCat = numberOfCats;
-    numberOfCats++;
-    return locationOfCat;
+    throw std::logic_error("newCat is already in database.");
 }
 

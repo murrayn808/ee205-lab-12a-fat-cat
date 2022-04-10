@@ -9,33 +9,42 @@
 /// @date   30_Mar_2022
 ///////////////////////////////////////////////////////////////////////////////
 
-#include <cstring>
 #include <stdexcept>
-#include <iostream>
-#include <cassert>
 #include "config.h"
 #include "catDatabase.h"
 #include "Cat.h"
-#include "reportCats.h"
-#define MAX_CATS 1024
 #define MAX_NAME_LENGTH 50
-
-struct Cat catArray[MAX_CATS];
 
 Cat* catDatabaseHeadPointer = nullptr;
 
-extern bool isCatInDatabase(Cat* newCat){
-    for(int i=0;i<numberOfCats;i++){
-        if(strcmp(name,catArray[i].name)==0){
+extern bool isCatInDatabase(const Cat* aCat){
+    Cat* catToLookAt = catDatabaseHeadPointer;
+    //first iteration: while first cat not empty check if that cat is the cat we're adding if not set the next cat to look at = to second cat
+    //while second cat is not null keep searching, if the second cat is the same as new cat return true stop searching
+    while(catToLookAt != nullptr){
+        if(aCat == catToLookAt){
             return true;
         }
+        catToLookAt = catToLookAt->next;
     }
     return false;
 }
 
+extern bool validateDatabase(){
+    Cat* catToLookAt = catDatabaseHeadPointer;
+    while(catToLookAt != nullptr) {
+        if (!catToLookAt->validate()) {
+            return false;
+        }
+        catToLookAt = catToLookAt->next;
+    }
+    return true;
+}
+
 int numberOfCats = 0;
-int initializeDatabase(){
-    numberOfCats = 0;
-    memset(&catArray[0],0,sizeof(catArray));
-    return 0;
+
+void initializeDatabase(){
+    if(catDatabaseHeadPointer != nullptr){
+        throw std::logic_error("Old database not empty.");
+    }
 }

@@ -10,31 +10,47 @@
 //////////////////////////////////////////////////////////////////////////
 
 
-#include <cstdio>
 #include "catDatabase.h"
 #include "config.h"
 
-int printCat(int index){
-    if(index<0||index>=numberOfCats){
-        fprintf(stderr, "animalFarm0: Bad cat [%d]", index);
+const char* breedName(const enum Breed breed){
+    //unknown breed MAINE_COON, MANX, SHORTHAIR, PERSIAN, SPHYNX
+    switch(breed){
+        case UNKNOWN_BREED: return "Unknown Breed";
+        case MAINE_COON: return "Maine Coon";
+        case MANX: return "Manx";
+        case SHORTHAIR: return "Shorthair";
+        case PERSIAN: return "Persian";
+        case SPHYNX: return "Sphynx";
     }
-
-    printf("cat index=[%d] name=[%s] gender=[%d] breed=[%d] isCatFixed=[%d] weight=[%f] collarColor1=[%s] collarColor2=[%s] license=[%llu]\n", index, catArray[index].name, catArray[index].gender, catArray[index].breed, catArray[index].isCatFixed, catArray[index].weight, colorName(catArray[index].collarColor1), colorName(catArray[index].collarColor2), catArray[index].license);
-    return 0;
+    return nullptr;
 }
 
-int printAllCats(){
-    for(int i=0;i<numberOfCats;i++){
-        printCat(i);
+const char* genderName(const enum Gender gender){
+    switch(gender){
+        case UNKNOWN_GENDER: return "Unknown Gender";
+        case MALE: return "Male";
+        case FEMALE: return "Female";
     }
-    return 0;
+    return nullptr;
 }
 
-int findCat(char name[]){
-    for(int i=0;i<numberOfCats;i++){
-        if(strcmp(name,catArray[i].name)==0){
-            return i;
+Cat* findCatByName(const char* name){
+    Cat* catToLookAt = catDatabaseHeadPointer;
+    while(catToLookAt != nullptr) {
+        if (strcmp(name,catToLookAt->getName())==0){
+            return catToLookAt;
         }
+        catToLookAt = catToLookAt->next;
     }
-    return -1;
+    return nullptr;
+}
+
+bool printAllCats(){
+    Cat* catToLookAt = catDatabaseHeadPointer;
+    while(catToLookAt != nullptr) {
+        catToLookAt->print();
+        catToLookAt = catToLookAt->next;
+    }
+    return true;
 }

@@ -15,4 +15,4 @@
 #pragma once
 extern bool isCatInDatabase(char name[]);
 
-extern int addCat(char name[], enum Gender gender, enum Breed breed, bool isCatFixed, Weight weight);
+extern bool addCat(Cat* newCat);

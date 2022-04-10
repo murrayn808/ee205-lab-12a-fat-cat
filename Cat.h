@@ -13,7 +13,6 @@
 #include <cstdio>
 #include <cstring>
 #include "newTypeDef.h"
-#include "catDatabase.h"
 #include "config.h"
 #pragma once
 #define MAX_NAME_LENGTH 50

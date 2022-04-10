@@ -14,6 +14,8 @@
 #include "catDatabase.h"
 #pragma once
 
-extern int printCat(int index);
-extern int printAllCats();
-extern int findCat(char name[]);
+extern const char* breedName(enum Breed breed);
+extern const char* genderName(enum Gender gender);
+extern Cat* findCatByName(const char* name);
+extern bool printAllCats();
+

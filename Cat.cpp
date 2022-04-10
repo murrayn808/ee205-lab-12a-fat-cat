@@ -22,7 +22,7 @@
 using std::array; using std::fill;
 
 Cat::Cat(){
-    memset(name, 0, sizeof (name));
+    memset(name, 0, MAX_NAME_LENGTH);
     gender = UNKNOWN_GENDER;
     breed = UNKNOWN_BREED;
     isCatFixed = false;
@@ -30,8 +30,7 @@ Cat::Cat(){
 }
 
 Cat::Cat(const char* newName, const Gender newGender, const Breed newBreed, const Weight newWeight){
-    strncpy(name, newName, sizeof(name) );
-    name[MAX_NAME_LENGTH-1]='\0';
+    setName(newName);
     gender = newGender;
     breed = newBreed;
     isCatFixed = false;
@@ -47,16 +46,9 @@ const char *Cat::getName() const noexcept {
 }
 
 void Cat::setName(const char *newName) {
-    if((strlen(name)<=MAX_NAME_LENGTH)&& strlen(name)>0){
-        for(int i=0;i<MAX_NAME_LENGTH;i++){
-            name[i]='\0';
-        }
-        strcpy(catArray[numberOfCats].name,name);
-        int j=0;
-        while(newName[j]!='\0') {
-            name[j] = newName[j];
-            j++;
-        }
+    if(validateName(newName)) {
+        memset(name, 0, MAX_NAME_LENGTH);
+        strcpy(name, newName);
     }
 }
 
@@ -81,7 +73,7 @@ Weight Cat::getWeight() const noexcept {
 }
 
 void Cat::setWeight(Weight newWeight) {
-    if(newWeight>0){
+    if(validateWeight(newWeight)){
         weight = newWeight;
     }
 }
@@ -112,7 +104,7 @@ bool Cat::validateGender(const Gender newGender) {
 }
 
 bool Cat::validateWeight(const Weight newWeight) {
-    if(newWeight!=UNKNOWN_WEIGHT){
+    if(newWeight>0){
         return true;
     }
     else{
@@ -166,7 +158,7 @@ bool Cat::print() const noexcept {
 }
 
 void Cat::zeroOutMemberData() {
-     memset(name, 0, sizeof (name));
+     memset(name, 0, MAX_NAME_LENGTH);
      gender = UNKNOWN_GENDER;
      breed = UNKNOWN_BREED;
      isCatFixed = false;

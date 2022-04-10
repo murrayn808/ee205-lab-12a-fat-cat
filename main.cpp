@@ -8,41 +8,30 @@
 /// @author Nathaniel Murray <murrayn@hawaii.edu>
 /// @date 3_20_2022
 //////////////////////////////////////////////////////////////////////////
-#include <stdio.h>
-#include <cassert>
-#include <cstring>
-#include <exception>
-#include <iostream>
+#include <cstdio>
 #include "Cat.h"
-#include "catDatabase.h"
-#include "addCats.h"
 #include "reportCats.h"
 #include "deleteCats.h"
 #include "config.h"
+#define ILLEGAL_NAME "12345678901234567890123456789012345678901234567890"
+#define MAX_NAME1 "1234567890123456789012345678901234567890123456789"
 
-int main(int argc, char *argv[])
+int main(__attribute__((unused)) int argc, __attribute__((unused)) char *argv[])
 {
-    printf("Starting Animal Farm 1\n");
+    printf("Starting Animal Farm 2\n");
 
-    addCat( "Loki", MALE, PERSIAN, true, 8.5, BLACK, WHITE, 101 ) ;
-    addCat( "Milo", MALE, MANX, true, 7.0, BLACK, RED, 102 ) ;
-    addCat( "Bella", FEMALE, MAINE_COON, true, 18.2, BLACK, BLUE, 103 ) ;
-    addCat( "Kali", FEMALE, SHORTHAIR, false, 9.2, BLACK, GREEN, 104 ) ;
-    addCat( "Trin", FEMALE, MANX, true, 12.2, BLACK, PINK, 105 ) ;
-    addCat( "Chili", UNKNOWN_GENDER, SHORTHAIR, false, 19.0, WHITE, BLACK, 106 ) ;
-    printAllCats();
-    int kali = findCat( "Kali" ) ;
-    updateCatName( kali, "Chili" ) ; // this should fail
-    printCat( kali );
-    updateCatName( kali, "Capulet" ) ;
-    updateCatWeight( kali, 9.9 ) ;
-    fixCat( kali ) ;
-    printCat( kali );
+    Cat loki("Loki", MALE , PERSIAN, 1.0 );
+    Cat milo("Milo", MALE, MANX, 1.1);
+    Cat bella("Bella", FEMALE, MAINE_COON, 1.2);
+    Cat kali("Kali", FEMALE, SHORTHAIR, 1.3);
+    Cat trin("Trin", FEMALE, MANX, 1.4);
+    Cat chili("Chili", MALE, SHORTHAIR, 1.5);
+
     printAllCats();
     deleteAllCats();
     printAllCats();
 
-    printf("Done with Animal Farm 1\n");
+    printf("Done with Animal Farm 2\n");
 
     return 0;
 }

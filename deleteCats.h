@@ -11,6 +11,8 @@
 
 #include <cstdio>
 #include "catDatabase.h"
+#include "Cat.h"
 #pragma once
 
-extern int deleteAllCats();
+extern bool deleteCat(Cat* deleteThisCat);
+extern bool deleteAllCats();
