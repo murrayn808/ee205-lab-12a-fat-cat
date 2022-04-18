@@ -100,12 +100,12 @@ void Weight::dump()const{
     cout << setfill( ' ' ) ;
     cout << left ;
     cout << boolalpha ;
-    FORMAT_LINE( "Weight", "this" ) << getName() << endl ;
+    FORMAT_LINE( "Weight", "this" ) << this << endl ;
     FORMAT_LINE( "Weight", "isKnown" ) << blsKnown << endl ;
-    FORMAT_LINE( "Weight", "weight" ) << breedName( getWeight() ) << endl ;
-    FORMAT_LINE( "Weight", "unitOfWeight" ) << isFixed() << endl ;
-    FORMAT_LINE( "Weight", "hasMax" ) << getWeight() << endl ;
-    FORMAT_LINE( "Weight", "maxWeight" ) << << endl;
+    FORMAT_LINE( "Weight", "weight" ) << getWeight() << endl ;
+    FORMAT_LINE( "Weight", "unitOfWeight" ) << unitOfWeight << endl ;
+    FORMAT_LINE( "Weight", "hasMax" ) << bHasMax << endl ;
+    FORMAT_LINE( "Weight", "maxWeight" ) << maxWeight << endl;
     return true ;
 }
 
