@@ -15,9 +15,7 @@
 #include <cassert>
 
 int main(void) {
-    Weight noWeight();
-    void Weight::dump();
-
+    Weight noWeight;
     return 0;
 }
 
