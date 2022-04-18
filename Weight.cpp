@@ -108,6 +108,27 @@ void Weight::dump()const noexcept{
     FORMAT_LINE( "Weight", "maxWeight" ) << maxWeight << endl;
 }
 
+bool Weight::hasMaxWeight() const noexcept{
+    if(blsKnown == true){
+        return true;
+    }
+    return false;
+}
+
+bool Weight::hasMaxWeight() const noexcept{
+    if(bHasMax == true){
+        return true;
+    }
+    return false;
+}
+
+bool Weight::validate() const noexcept{
+    if(isWeightValid(weight)&&isWeightKnown()){
+        return true;
+    }
+    return false;
+}
+
 float Weight::getMaxWeight() const noexcept{
     if(hasMaxWeight()){
         return maxWeight;
