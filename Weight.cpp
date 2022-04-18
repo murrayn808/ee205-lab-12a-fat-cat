@@ -36,7 +36,7 @@ Weight::Weight(float newWeight){
     }
 }
 
-Weight::Weight(const Weight::UnitOfWeight newUnitOfWeight){
+Weight::Weight(const Weight::UnitOfWeight newUnitOfWeight)noexcept{
    unitOfWeight = newUnitOfWeight;
    weight = UNKNOWN_WEIGHT;
    maxWeight = UNKNOWN_WEIGHT;
@@ -91,7 +91,7 @@ Weight::Weight(float newWeight, const Weight::UnitOfWeight newUnitOfWeight, floa
     }
 }
 
-void Weight::dump()const{
+void Weight::dump()const noexcept{
     using namespace std;
 
 #define FORMAT_LINE(className, member) cout << setw(8) << (className) << setw(20) << (member) << setw(52)
@@ -106,7 +106,6 @@ void Weight::dump()const{
     FORMAT_LINE( "Weight", "unitOfWeight" ) << unitOfWeight << endl ;
     FORMAT_LINE( "Weight", "hasMax" ) << bHasMax << endl ;
     FORMAT_LINE( "Weight", "maxWeight" ) << maxWeight << endl;
-    return true ;
 }
 
 float Weight::getMaxWeight() const noexcept{
@@ -196,23 +195,23 @@ void Weight::setWeight(float newWeight) {
     }
 }
 
-static float Weight::fromKilogramToPound(float kilogram)noexcept{
+float Weight::fromKilogramToPound(float kilogram)noexcept{
     return kilogram/KILOS_IN_A_POUND;
 }
 
-static float Weight::fromPoundToKilogram(float pound)noexcept{
+float Weight::fromPoundToKilogram(float pound)noexcept{
     return pound*KILOS_IN_A_POUND;
 }
 
-static float Weight::fromPoundToSlug(float pound)noexcept{
+float Weight::fromPoundToSlug(float pound)noexcept{
     return pound*SLUGS_IN_A_POUND;
 }
 
-static float Weight::fromSlugToPound(float slug)noexcept{
+float Weight::fromSlugToPound(float slug)noexcept{
     return slug/SLUGS_IN_A_POUND;
 }
 
-static float Weight::convertWeight(float fromWeight, UnitOfWeight fromUnit, UnitOfWeight toUnit)noexcept{
+float Weight::convertWeight(float fromWeight, UnitOfWeight fromUnit, UnitOfWeight toUnit)noexcept{
     double commonValue;
 
     switch (fromUnit) {
