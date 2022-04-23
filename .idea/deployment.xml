@@ -5,11 +5,11 @@
       <paths name="Wiliki (c8df506d-81a9-4499-981a-f1785335f7b9)">
         <serverdata>
           <mappings>
-            <mapping deploy="/tmp/tmp.mLuHq0yr7M" local="$PROJECT_DIR$" />
+            <mapping deploy="/tmp/tmp.nLuHq0yr7M" local="$PROJECT_DIR$" />
           </mappings>
           <excludedPaths>
-            <excludedPath local="true" path="$PROJECT_DIR$/cmake-build-default" />
             <excludedPath local="true" path="$PROJECT_DIR$/cmake-build-debug-wiliki" />
+            <excludedPath local="true" path="$PROJECT_DIR$/cmake-build-default" />
             <excludedPath local="true" path="$PROJECT_DIR$/cmake-build-debug-wiliki" />
           </excludedPaths>
         </serverdata>

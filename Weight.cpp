@@ -16,9 +16,9 @@
 const float Weight::UNKNOWN_WEIGHT = -1;
 const float Weight::KILOS_IN_A_POUND = 0.453592;
 const float Weight::SLUGS_IN_A_POUND = 0.031081;
-const string Weight::POUND_LABEL = "Pound";
-const string Weight::KILO_LABEL = "Kilo";
-const string Weight::SLUG_LABEL = "Slug";
+const std::string Weight::POUND_LABEL = "Pound";
+const std::string Weight::KILO_LABEL = "Kilo";
+const std::string Weight::SLUG_LABEL = "Slug";
 
 Weight::Weight()noexcept{
     unitOfWeight = POUND;
@@ -108,7 +108,7 @@ void Weight::dump()const noexcept{
     FORMAT_LINE( "Weight", "maxWeight" ) << maxWeight << endl;
 }
 
-bool Weight::hasMaxWeight() const noexcept{
+bool Weight::isWeightKnown()const noexcept{
     if(blsKnown == true){
         return true;
     }
