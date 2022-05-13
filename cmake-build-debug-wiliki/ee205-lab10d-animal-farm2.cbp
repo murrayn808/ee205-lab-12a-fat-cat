@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="ee205-lab10d-animal-farm2"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="/tmp/tmp.mLuHq0yr7M/cmake-build-debug-wiliki"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/gmake -j32 -f &quot;/tmp/tmp.mLuHq0yr7M/cmake-build-debug-wiliki/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/gmake -j32 -f &quot;/tmp/tmp.mLuHq0yr7M/cmake-build-debug-wiliki/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/gmake -j32 -f &quot;/tmp/tmp.mLuHq0yr7M/cmake-build-debug-wiliki/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/gmake -j32 -f &quot;/tmp/tmp.mLuHq0yr7M/cmake-build-debug-wiliki/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="ee205-lab10d-animal-farm2">
+				<Option output="/tmp/tmp.mLuHq0yr7M/cmake-build-debug-wiliki/ee205-lab10d-animal-farm2" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/tmp/tmp.mLuHq0yr7M/cmake-build-debug-wiliki"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11"/>
+					<Add directory="/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/x86_64-redhat-linux"/>
+					<Add directory="/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-redhat-linux/11/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/gmake -j32 -f &quot;/tmp/tmp.mLuHq0yr7M/cmake-build-debug-wiliki/Makefile&quot;  VERBOSE=1 ee205-lab10d-animal-farm2"/>
+					<CompileFile command="/usr/bin/gmake -j32 -f &quot;/tmp/tmp.mLuHq0yr7M/cmake-build-debug-wiliki/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/gmake -j32 -f &quot;/tmp/tmp.mLuHq0yr7M/cmake-build-debug-wiliki/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/gmake -j32 -f &quot;/tmp/tmp.mLuHq0yr7M/cmake-build-debug-wiliki/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="ee205-lab10d-animal-farm2/fast">
+				<Option output="/tmp/tmp.mLuHq0yr7M/cmake-build-debug-wiliki/ee205-lab10d-animal-farm2" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/tmp/tmp.mLuHq0yr7M/cmake-build-debug-wiliki"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11"/>
+					<Add directory="/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/x86_64-redhat-linux"/>
+					<Add directory="/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-redhat-linux/11/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/gmake -j32 -f &quot;/tmp/tmp.mLuHq0yr7M/cmake-build-debug-wiliki/Makefile&quot;  VERBOSE=1 ee205-lab10d-animal-farm2/fast"/>
+					<CompileFile command="/usr/bin/gmake -j32 -f &quot;/tmp/tmp.mLuHq0yr7M/cmake-build-debug-wiliki/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/gmake -j32 -f &quot;/tmp/tmp.mLuHq0yr7M/cmake-build-debug-wiliki/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/gmake -j32 -f &quot;/tmp/tmp.mLuHq0yr7M/cmake-build-debug-wiliki/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="/tmp/tmp.mLuHq0yr7M/cmake-build-debug-wiliki"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/gmake -j32 -f &quot;/tmp/tmp.mLuHq0yr7M/cmake-build-debug-wiliki/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/gmake -j32 -f &quot;/tmp/tmp.mLuHq0yr7M/cmake-build-debug-wiliki/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/gmake -j32 -f &quot;/tmp/tmp.mLuHq0yr7M/cmake-build-debug-wiliki/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/gmake -j32 -f &quot;/tmp/tmp.mLuHq0yr7M/cmake-build-debug-wiliki/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="/tmp/tmp.mLuHq0yr7M/cmake-build-debug-wiliki"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/gmake -j32 -f &quot;/tmp/tmp.mLuHq0yr7M/cmake-build-debug-wiliki/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/gmake -j32 -f &quot;/tmp/tmp.mLuHq0yr7M/cmake-build-debug-wiliki/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/gmake -j32 -f &quot;/tmp/tmp.mLuHq0yr7M/cmake-build-debug-wiliki/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/gmake -j32 -f &quot;/tmp/tmp.mLuHq0yr7M/cmake-build-debug-wiliki/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="/tmp/tmp.mLuHq0yr7M/Cat.cpp">
+			<Option target="ee205-lab10d-animal-farm2"/>
+		</Unit>
+		<Unit filename="/tmp/tmp.mLuHq0yr7M/Cat.h">
+			<Option target="ee205-lab10d-animal-farm2"/>
+		</Unit>
+		<Unit filename="/tmp/tmp.mLuHq0yr7M/addCats.cpp">
+			<Option target="ee205-lab10d-animal-farm2"/>
+		</Unit>
+		<Unit filename="/tmp/tmp.mLuHq0yr7M/addCats.h">
+			<Option target="ee205-lab10d-animal-farm2"/>
+		</Unit>
+		<Unit filename="/tmp/tmp.mLuHq0yr7M/catDatabase.cpp">
+			<Option target="ee205-lab10d-animal-farm2"/>
+		</Unit>
+		<Unit filename="/tmp/tmp.mLuHq0yr7M/catDatabase.h">
+			<Option target="ee205-lab10d-animal-farm2"/>
+		</Unit>
+		<Unit filename="/tmp/tmp.mLuHq0yr7M/config.h">
+			<Option target="ee205-lab10d-animal-farm2"/>
+		</Unit>
+		<Unit filename="/tmp/tmp.mLuHq0yr7M/deleteCats.cpp">
+			<Option target="ee205-lab10d-animal-farm2"/>
+		</Unit>
+		<Unit filename="/tmp/tmp.mLuHq0yr7M/deleteCats.h">
+			<Option target="ee205-lab10d-animal-farm2"/>
+		</Unit>
+		<Unit filename="/tmp/tmp.mLuHq0yr7M/main.cpp">
+			<Option target="ee205-lab10d-animal-farm2"/>
+		</Unit>
+		<Unit filename="/tmp/tmp.mLuHq0yr7M/newTypeDef.h">
+			<Option target="ee205-lab10d-animal-farm2"/>
+		</Unit>
+		<Unit filename="/tmp/tmp.mLuHq0yr7M/reportCats.cpp">
+			<Option target="ee205-lab10d-animal-farm2"/>
+		</Unit>
+		<Unit filename="/tmp/tmp.mLuHq0yr7M/reportCats.h">
+			<Option target="ee205-lab10d-animal-farm2"/>
+		</Unit>
+		<Unit filename="/tmp/tmp.mLuHq0yr7M/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>

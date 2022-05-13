@@ -1,0 +1,3 @@
+/tmp/tmp.nLuHq0yr7Z/cmake-build-debug-wiliki/CMakeFiles/ee205-lab12a-fat-cat.dir
+/tmp/tmp.nLuHq0yr7Z/cmake-build-debug-wiliki/CMakeFiles/edit_cache.dir
+/tmp/tmp.nLuHq0yr7Z/cmake-build-debug-wiliki/CMakeFiles/rebuild_cache.dir
